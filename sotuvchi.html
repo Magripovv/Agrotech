@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+    <title>Kabinet</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section id="statistics" class="statistics">
+            <div class="statistics-item">
+                <!-- <h3 class="statistics-number">
+                    +
+                </h3> -->
+                <a href="./maxsulotlar.html"><button class="fruit_stitle">
+                    Mevalarni joylashtirish
+                </button></a>
+            </div>
+            <div class="statistics-item">
+                <!-- <h3 class="statistics-number">
+                    +
+                </h3> -->
+                <a href="./maxsulotlar.html"><button class="fruit_stitle">
+                    Sabzovotlarni joylashtirish
+                </button></a>
+            </div>
+            <div class="statistics-item">
+                <!-- <h3 class="statistics-number">
+                    +
+                </h3> -->
+                <a href="./maxsulotlar.html"><button class="fruit_stitle">
+                    Xizmatlarni joylashtirish
+                </button></a>
+            </div>
+            <div class="sotuv_image">
+                <img src="./images/photo_2023-04-15_18-02-02.jpg" alt="">
+            </div>
+        </section>
+        <div class="products remove">
+            <h1>Kiritilgan mahsulotlar</h1>
+            <p class="productName"></p>
+            <p class="productPrice"></p>    
+        </div>
+    </div>
+    <script src="./main.js"></script>
+    <script>
+        const productName = document.querySelector('.productName')
+        const productPrice = document.querySelector('.productPrice')
+        const products = document.querySelector('.products')
+
+        if(localStorage.getItem('name')) {
+            products.classList.remove('remove')
+        } else {
+            products.classList.add('add')
+        }
+
+        if(localStorage.getItem('name')) {
+            console.log(1);
+        } else {
+            console.log(2);
+        }
+
+        productName.innerHTML = `Nomi: ${localStorage.getItem('name')}`
+        productPrice.innerHTML = `Narxi: ${localStorage.getItem('price')}`
+    </script>
+    
+</body>
